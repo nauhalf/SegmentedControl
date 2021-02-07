@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--    <com.alanvan.segmented_control.SegmentedControlGroup-->
+    <!--        android:id="@+id/segmented_control_group"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        app:customSliderColor="@color/white"-->
+    <!--        app:customDividerColor="#E3E3E5"-->
+    <!--        android:backgroundTint="#E3E3E5"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <com.alanvan.segmented_control.SegmentedControlButton-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:id="@+id/button1"-->
+    <!--            android:text="Human"/>-->
+
+    <!--        <com.alanvan.segmented_control.SegmentedControlButton-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:id="@+id/button2"-->
+    <!--            android:text="Elf"/>-->
+
+    <!--        <com.alanvan.segmented_control.SegmentedControlButton-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:id="@+id/button3"-->
+    <!--            android:text="Hobbit"/>-->
+
+    <!--    </com.alanvan.segmented_control.SegmentedControlGroup>-->
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+
+        android:background="@drawable/segmented_background"
+        android:padding="2dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            style="@style/SegmentedTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/segmented_height"
+            android:background="@drawable/segmented_background"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:tabGravity="fill"
+            app:tabIndicator="@drawable/segmented_indicator"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorGravity="center"
+            app:tabIndicatorHeight="@dimen/segmented_height"
+            app:tabInlineLabel="true"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabRippleColor="@null"
+            app:tabTextColor="@color/black" />
+    </FrameLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
